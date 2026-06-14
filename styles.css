@@ -1,0 +1,376 @@
+/*
+ * Harsh Nishant Lalai — Academic Website
+ * Design system based on Fred Hohman (fredhohman.com)
+ * and Omar Shaikh (oshaikh.com)
+ */
+
+/* ─────────────────────────────────────────────────────────────
+   CSS Custom Properties
+   ───────────────────────────────────────────────────────────── */
+:root {
+  --col: 3.5rem;
+  --text:         #414141;
+  --title:        #313131;
+  --bg:           #ffffff;
+  --border:       #dddddd;
+  --footer-bg:    #1e1e24;
+  --footer-text:  #e6e6e6;
+  --blue:         #357edd;
+  --dark-blue:    #00449e;
+  --light-blue:   #96ccff;
+  --intro-blue:   #e4f2ff;
+  --near-black:   #111111;
+  --dark-gray:    #333333;
+  --mid-gray:     #555555;
+  --gray:         #777777;
+  --silver:       #999999;
+  --light-silver: #aaaaaa;
+  --moon-gray:    #cccccc;
+  --light-gray:   #eeeeee;
+  --near-white:   #f4f4f4;
+  --black-025: rgba(0,0,0,.025);
+  --black-05:  rgba(0,0,0,.05);
+  --black-10:  rgba(0,0,0,.10);
+  --black-20:  rgba(0,0,0,.20);
+  --black-30:  rgba(0,0,0,.30);
+  --black-60:  rgba(0,0,0,.60);
+  --black-80:  rgba(0,0,0,.80);
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Base / Reset
+   ───────────────────────────────────────────────────────────── */
+*,*::before,*::after {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+html,body { margin:0; padding:0; }
+html {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif,
+    "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 1.5;
+}
+body {
+  color: var(--text);
+  background-color: var(--bg);
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+img { display:block; max-width:100%; width:100%; }
+
+/* ─────────────────────────────────────────────────────────────
+   Typography
+   ───────────────────────────────────────────────────────────── */
+h1,h2,h3,h4,h5,h6 { margin-top:1rem; margin-bottom:0.5rem; }
+h1 { font-size:2.25rem; line-height:1.25; }
+h2 { font-size:2rem; }
+h3 { font-size:1.5rem; }
+h4 { font-size:1.25rem; }
+h5 { font-size:1rem; }
+h6 { font-size:0.875rem; }
+p  { margin-top:0.75rem; margin-bottom:0.75rem; }
+
+a { color:var(--blue); text-decoration:none; }
+a:hover,a:focus {
+  color:var(--dark-blue);
+  text-decoration:underline;
+  text-decoration-color:var(--light-silver);
+}
+hr { margin:1.5rem 0; border:0; border-top:1px solid var(--border); }
+
+/* ─────────────────────────────────────────────────────────────
+   CSS Grid Layout System
+   Named-column grid identical to Fred Hohman's design.
+   Column anatomy: screen > page > middle > text (8 cols)
+   ───────────────────────────────────────────────────────────── */
+main,header,footer {
+  display: grid;
+  justify-items: stretch;
+  grid-template-columns:
+    [screen-start] 1fr
+    [page-start kicker-start] minmax(min-content, var(--col))
+    [middle-start] minmax(min-content, var(--col))
+    [text-start kicker-end] repeat(8, minmax(min-content, var(--col)))
+    [text-end gutter-start] minmax(min-content, var(--col))
+    [middle-end] minmax(min-content, var(--col))
+    [page-end gutter-end] 1fr
+    [screen-end];
+  column-gap: 1.5rem;
+}
+main > * { grid-column: text; }
+
+.l-kicker  { grid-column: kicker;  }
+.l-gutter  { grid-column: gutter;  }
+.l-text    { grid-column: text;    }
+.l-middle  { grid-column: middle;  }
+.l-page    { grid-column: page;    }
+.l-screen  { grid-column: screen;  }
+
+/* ─────────────────────────────────────────────────────────────
+   Header / Masthead
+   ───────────────────────────────────────────────────────────── */
+#masthead {
+  border-bottom: 1px solid var(--border);
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+#masthead > h1 {
+  grid-column: text-start / 6;
+  font-size: 1.25rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+}
+#masthead > h1 > a { color:var(--text); }
+#masthead > h1 > a:hover { color:var(--near-black); text-decoration:none; }
+
+#masthead > nav {
+  grid-column: 6 / text-end;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 0.9rem;
+}
+nav > a {
+  background-color: var(--black-025);
+  border-radius: 5rem;
+  padding: 0.5rem 0.75rem;
+  margin: 0.25rem;
+  text-align: center;
+  transition: background 0.2s ease-in-out, transform 0.2s ease-in-out;
+  color: var(--text);
+  font-weight: 500;
+}
+nav > a:hover {
+  text-decoration: none;
+  background: var(--black-05);
+  transform: scale(1.03);
+  color: var(--text);
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Intro Section
+   ───────────────────────────────────────────────────────────── */
+#intro-wrapper { margin-top: 3rem; }
+#intro-wrapper > div { font-size: 1.2em; }
+
+#intro-title-wrapper {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1rem;
+}
+#intro-image-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+}
+#intro-image {
+  border-radius: 5rem;
+  height: 8rem;
+  width: 8rem;
+  object-fit: cover;
+  background-color: var(--black-05);
+}
+#intro-title-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 1.5rem;
+}
+#intro-title {
+  color: var(--near-black);
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+#intro-subtitle { font-size:1.35rem; color:var(--silver); margin-top:0.25rem; }
+#intro-subtitle a { color:var(--silver); }
+#intro-subtitle a:hover { color:var(--gray); text-decoration:none; }
+
+#intro-title-socials {
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--black-025);
+  border-radius: 5rem;
+  height: 2.5rem;
+  width: 2.5rem;
+  color: var(--text);
+  font-size: 1rem;
+  transition: background 0.2s ease-in-out;
+  text-decoration: none;
+}
+.social-link:hover { background:var(--black-05); color:var(--text); text-decoration:none; }
+
+#everything-else {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 1.5rem;
+}
+#everything-else > a {
+  background-color: var(--black-025);
+  border-radius: 5rem;
+  padding: 0.75rem;
+  margin: 0.25rem;
+  text-align: center;
+  transition: background 0.2s ease-in-out, transform 0.2s ease-in-out;
+  font-size: 1rem;
+  color: var(--text);
+  font-weight: 500;
+  text-decoration: none;
+}
+#everything-else > a:hover { background:var(--black-05); transform:scale(1.03); text-decoration:none; }
+
+.icon-right-space { margin-right: 0.5rem; }
+
+/* ─────────────────────────────────────────────────────────────
+   Section Dividers & Feature Headings
+   ───────────────────────────────────────────────────────────── */
+.home-hr { margin: 2.5rem 0; }
+
+.feature-title { margin-top:0; margin-bottom:0; font-size:2rem; font-weight:600; }
+.feature-title > a { font-weight:600; color:var(--title); }
+.feature-title > a:hover { color:var(--dark-blue); text-decoration:none; }
+.feature-text { padding-bottom:1rem; font-size:1.15rem; color:var(--gray); margin-top:0.5rem; margin-bottom:0; }
+
+/* ─────────────────────────────────────────────────────────────
+   Publication Cover Cards
+   ───────────────────────────────────────────────────────────── */
+.cover-wrapper { display:grid; gap:1rem; }
+.cover-wrapper-1-col { grid-template-columns: 1fr; }
+.cover-wrapper-2-col { grid-template-columns: 1fr 1fr; }
+.cover-wrapper-3-col { grid-template-columns: 1fr 1fr 1fr; }
+
+.cover {
+  height: 405px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--black-025);
+  border-radius: 1.5rem;
+  overflow: hidden;
+  transition: background 0.2s ease-in-out, transform 0.2s ease-in-out;
+  color: var(--text);
+  text-decoration: none;
+}
+.cover:hover { background-color:var(--black-05); transform:scale(1.03); text-decoration:none; }
+
+.cover-image { width:100%; padding:0.5rem; }
+.paper-placeholder { width:100%; height:160px; border-radius:1rem; }
+.paper-bg-1 { background: linear-gradient(135deg,#dbeeff 0%,#b3d4f0 100%); }
+.paper-bg-2 { background: linear-gradient(135deg,#d9f0e4 0%,#aedec5 100%); }
+.paper-bg-3 { background: linear-gradient(135deg,#ecdcff 0%,#d4b8f0 100%); }
+
+.cover-inner {
+  padding: 0.5rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+.cover-top a:hover { text-decoration:none; }
+.cover-title { font-size:1.2rem; font-weight:600; color:var(--title); line-height:1.3; }
+.cover-subtitle { font-size:0.875rem; color:var(--black-60); padding-top:0.35rem; padding-bottom:0.35rem; line-height:1.25; font-weight:400; }
+.cover-footer-wrapper { display:flex; justify-content:space-between; align-items:flex-end; }
+.cover-venue { font-size:0.75rem; font-weight:600; color:var(--mid-gray); }
+.cover-year  { font-size:0.75rem; color:var(--silver); margin-top:0.15rem; }
+.cover-links { font-size:0.75rem; }
+
+.pub-misc { display:flex; flex-wrap:wrap; gap:0.25rem; align-items:flex-end; justify-content:flex-end; }
+.pub-misc > a {
+  background-color: #ffffff;
+  padding: 0.25rem 0.6rem;
+  border-radius: 1rem;
+  color: var(--blue);
+  font-weight: 500;
+  font-size: 0.75rem;
+  transition: background 0.15s ease-in-out, color 0.15s ease-in-out;
+  text-decoration: none;
+}
+.pub-misc > a:hover { color:#ffffff; background-color:var(--blue); text-decoration:none; }
+
+/* ─────────────────────────────────────────────────────────────
+   Updates Timeline
+   ───────────────────────────────────────────────────────────── */
+.updates-list { margin-top:1rem; margin-bottom:2rem; }
+.update-item {
+  display: grid;
+  grid-template-columns: 7rem 1fr;
+  gap: 1.5rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 1rem;
+}
+.update-item:last-child { border-bottom:none; }
+.update-date { color:var(--silver); font-weight:500; font-size:0.9rem; padding-top:0.15rem; white-space:nowrap; }
+.update-text { color:var(--text); line-height:1.5; }
+
+/* ─────────────────────────────────────────────────────────────
+   Footer
+   ───────────────────────────────────────────────────────────── */
+footer {
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  margin-top: 2rem;
+}
+#footer-left  { grid-column: text-start / 8; color:var(--footer-text); }
+#footer-right { grid-column: 8 / text-end; display:flex; align-items:flex-start; justify-content:flex-end; }
+.footer-icon { margin-left:0.75rem; color:var(--footer-text); font-size:1.1rem; transition:color 0.15s ease-in-out; text-decoration:none; }
+.footer-icon:hover { color:#ffffff; text-decoration:none; }
+.footer-link { color:var(--light-blue); }
+.footer-link:hover { color:#ffffff; }
+
+[id] { scroll-margin-top: 1rem; }
+
+/* ─────────────────────────────────────────────────────────────
+   Responsive: Pre-mobile (max 1100px)
+   ───────────────────────────────────────────────────────────── */
+@media screen and (max-width:1100px) {
+  #intro-wrapper,.feature-title,.feature-text,.home-hr,.updates-list { grid-column:page !important; }
+  .cover-wrapper { grid-column:page !important; }
+  #everything-else { display:flex; flex-direction:row; flex-wrap:wrap; }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Responsive: Mobile (max 768px)
+   ───────────────────────────────────────────────────────────── */
+@media screen and (max-width:768px) {
+  html { font-size:14px; }
+  main,header,footer {
+    grid-template-columns:
+      [screen-start] 12px
+      [page-start kicker-start text-start gutter-start middle-start] repeat(8,1fr)
+      [text-end page-end gutter-end kicker-end middle-end] 12px
+      [screen-end];
+    column-gap: 0.5rem;
+  }
+  #masthead > h1 { grid-column:page; margin-top:0.5rem; margin-bottom:0.5rem; }
+  #masthead > nav { grid-column:page; justify-content:flex-start; flex-wrap:wrap; }
+  #intro-image { height:5rem; width:5rem; }
+  #intro-title { font-size:2rem; }
+  #intro-subtitle { font-size:1.15rem; }
+  #everything-else { display:flex; flex-direction:row; flex-wrap:wrap; }
+  #everything-else > a { padding:0.5rem 1rem; font-size:0.9rem; }
+  .cover-wrapper { grid-template-columns:1fr !important; }
+  .cover { height:auto; min-height:260px; }
+  #footer-left,#footer-right { grid-column:page; }
+  #footer-left { margin-bottom:1.25rem; }
+  #footer-right { justify-content:flex-start; }
+  .footer-icon { margin-left:0; margin-right:0.75rem; }
+  .update-item { grid-template-columns:5.5rem 1fr; gap:0.75rem; }
+}
