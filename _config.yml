@@ -1,0 +1,20 @@
+title: Harsh Nishant Lalai
+description: Incoming PhD Student at Johns Hopkins University. Research in NLP and Large Language Models.
+url: https://harsh-lalai.github.io
+baseurl: ""
+
+author:
+  name: Harsh Nishant Lalai
+  email: hlalai1@jh.edu
+
+markdown: kramdown
+permalink: pretty
+
+exclude:
+  - README.md
+  - LICENSE
+  - Gemfile
+  - Gemfile.lock
+  - .venv
+  - .vscode
+  - vendor

@@ -1,0 +1,8 @@
+- level: Proficient
+  items: ["Python", "C", "C++", "PyTorch", "TensorFlow", "Scikit-learn", "Pandas"]
+
+- level: Comfortable
+  items: ["Java", "LaTeX", "Git", "NLTK"]
+
+- level: Familiar
+  items: ["R", "MySQL", "HTML", "CUDA"]

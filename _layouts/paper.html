@@ -1,0 +1,25 @@
+---
+layout: default
+masthead: true
+---
+
+{%- include masthead.html -%}
+
+<main>
+  {{ content }}
+</main>
+
+<script>
+  function copyBibtex(btn) {
+    const pre = btn.parentElement.querySelector('pre');
+    navigator.clipboard.writeText(pre.innerText).then(function () {
+      const original = btn.innerHTML;
+      btn.innerHTML = '<i class="fas fa-check"></i>';
+      btn.classList.add('copied');
+      setTimeout(function () {
+        btn.innerHTML = original;
+        btn.classList.remove('copied');
+      }, 1500);
+    });
+  }
+</script>

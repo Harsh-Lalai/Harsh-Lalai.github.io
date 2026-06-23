@@ -1,0 +1,74 @@
+---
+layout: paper
+title: "The World According to LLMs"
+description: "The World According to LLMs: How Geographic Origin Influences LLMs' Entity Deduction Capabilities"
+permalink: /papers/worldllms/
+---
+
+<div class="paper-header l-screen">
+  <div class="paper-header-content">
+    <h1>The World According to LLMs: How Geographic Origin Influences LLMs' Entity Deduction Capabilities</h1>
+    <div class="paper-authors">
+      <div class="author">
+        <img src="{{ '/images/people/harsh.webp' | relative_url }}" class="author-image" alt="Harsh Nishant Lalai">
+        <a href="{{ '/' | relative_url }}">Harsh Nishant Lalai</a><sup>*</sup>
+      </div>
+      <div class="author">
+        <img src="{{ '/images/people/raj.jpeg' | relative_url }}" class="author-image" alt="Raj Sanjay Shah">
+        <a href="https://raj-sanjay-shah.github.io/">Raj Sanjay Shah</a><sup>*</sup>
+      </div>
+      <div class="author">
+        <img src="{{ '/images/people/jiaxin.jpeg' | relative_url }}" class="author-image" alt="Jiaxin Pei" style="object-fit: contain;">
+        <a href="https://jiaxin-pei.github.io/">Jiaxin Pei</a>
+      </div>
+      <div class="author">
+        <img src="{{ '/images/people/sashank.webp' | relative_url }}" class="author-image" alt="Sashank Varma" style="object-position: center top;">
+        <a href="https://www.cc.gatech.edu/people/sashank-varma">Sashank Varma</a>
+      </div>
+      <div class="author">
+        <img src="{{ '/images/people/yi-chia.jpg' | relative_url }}" class="author-image" alt="Yi-Chia Wang" style="object-position: center top;">
+        Yi-Chia Wang
+      </div>
+      <div class="author">
+        <img src="{{ '/images/people/ali.jpg' | relative_url }}" class="author-image" alt="Ali Emami">
+        <a href="https://www.cs.ubc.ca/~aliemami/">Ali Emami</a>
+      </div>
+    </div>
+    <div class="paper-equal">*Authors contributed equally</div>
+    <div class="paper-venue">Conference on Language Modeling (COLM), 2025</div>
+  </div>
+</div>
+
+<div class="paper-body">
+
+  <h2>Abstract</h2>
+  <div>
+    Large Language Models (LLMs) have been extensively tuned to mitigate explicit biases, yet they often exhibit subtle implicit biases rooted in their pre-training data. Rather than directly probing LLMs with human-crafted questions that may trigger guardrails, we propose studying how models behave when they proactively ask questions themselves. The 20 Questions game, a multi-turn deduction task, serves as an ideal testbed for this purpose. We systematically evaluate geographic performance disparities in entity deduction using a new dataset, Geo20Q+, consisting of both notable people and culturally significant objects (e.g., foods, landmarks, animals) from diverse regions. We test popular LLMs across two gameplay configurations (canonical 20-question and unlimited turns) and in seven languages (English, Hindi, Mandarin, Japanese, French, Spanish, and Turkish). Our results reveal geographic disparities: LLMs are substantially more successful at deducing entities from the Global North than the Global South, and the Global West than the Global East. While Wikipedia pageviews and pre-training corpus frequency correlate mildly with performance, they fail to fully explain these disparities. Notably, the language in which the game is played has minimal impact on performance gaps. These findings demonstrate the value of creative, free-form evaluation frameworks for uncovering subtle biases in LLMs that remain hidden in standard prompting setups. By analyzing how models initiate and pursue reasoning goals over multiple turns, we find geographic and cultural disparities embedded in their reasoning processes. We release the dataset (Geo20Q+) and code at <a href="https://sites.google.com/view/llmbias20q/home">https://sites.google.com/view/llmbias20q/home</a>.
+  </div>
+
+  <h2>Materials</h2>
+  <div class="paper-materials">
+    <a href="https://arxiv.org/pdf/2508.05525"><i class="far fa-file-pdf"></i>PDF</a>
+    <a href="https://github.com/Harsh-Lalai/twentyq"><i class="fas fa-code"></i>Code</a>
+    <a href="https://github.com/Harsh-Lalai/Geo20QPlus"><i class="fas fa-database"></i>Dataset</a>
+    <a href="https://sites.google.com/view/llmbias20q/home"><i class="fas fa-link"></i>Project</a>
+  </div>
+
+  <h2>BibTeX</h2>
+  <div class="bibtex-wrapper"><button class="bibtex-copy" type="button" onclick="copyBibtex(this)" aria-label="Copy BibTeX" title="Copy BibTeX"><i class="far fa-copy"></i></button><div class="bibtex-scroll"><pre>@inproceedings{lalai2025worldllms,
+    title     = "The World According to {LLM}s: How Geographic Origin Influences {LLM}s' Entity Deduction Capabilities",
+    author    = "Lalai, Harsh Nishant  and
+                 Shah, Raj Sanjay  and
+                 Pei, Jiaxin  and
+                 Varma, Sashank  and
+                 Wang, Yi-Chia  and
+                 Emami, Ali",
+    booktitle = "Conference on Language Modeling (COLM)",
+    year      = "2025",
+    eprint    = "2508.05525",
+    archivePrefix = "arXiv",
+    primaryClass  = "cs.CL",
+    url       = "https://arxiv.org/abs/2508.05525",
+}</pre></div></div>
+
+</div>

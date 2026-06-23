@@ -1,0 +1,13 @@
+
+- year: 2026
+  authors_html: "<a href=\"https://harshlalai.github.io/\"><strong>Harsh Nishant Lalai</strong></a>*, <a href=\"https://raj-sanjay-shah.github.io/\">Raj Sanjay Shah</a>*, <a href=\"https://seas.harvard.edu/person/hanspeter-pfister\">Hanspeter Pfister</a>, <a href=\"https://www.cc.gatech.edu/people/sashank-varma\">Sashank Varma</a>, <a href=\"https://gracegsy.github.io/\">Grace Guo</a>"
+  equal_contribution: true
+  title: "When Visuals Aren't the Problem: Evaluating Vision-Language Models on Misleading Data Visualizations"
+  url: "/papers/visuals/"
+  venue: arXiv preprint
+  status: Under review at ACL Rolling Review (March 2026)
+  links:
+    - { label: PDF, url: "https://arxiv.org/abs/2603.22368" }
+    - { label: Code, url: "https://github.com/Harsh-Lalai/Evaluating-Vision-Language-Models-on-Misleading-Data-Visualizations" }
+    - { label: Dataset, url: "https://huggingface.co/datasets/HarvardVCG/MisVisBench" }
+    - { label: Project, url: "/papers/visuals/" }

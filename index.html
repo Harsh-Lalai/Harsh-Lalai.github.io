@@ -1,260 +1,216 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Harsh Nishant Lalai &mdash; Incoming PhD Student at Johns Hopkins University. Research in NLP and Large Language Models.">
-  <meta name="author" content="Harsh Nishant Lalai">
-  <meta property="og:title" content="Harsh Nishant Lalai">
-  <meta property="og:description" content="Incoming PhD Student at Johns Hopkins University. Research in NLP and Large Language Models.">
-  <meta property="og:type" content="website">
-  <title>Harsh Nishant Lalai</title>
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-        crossorigin="anonymous" referrerpolicy="no-referrer">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+---
+layout: default
+title: Harsh Nishant Lalai
+description: Harsh Nishant Lalai — Incoming PhD Student at Johns Hopkins University. Research in NLP and Large Language Models.
+---
 
-  <header id="masthead">
-    <h1><a href="/">Harsh Lalai</a></h1>
-    <nav>
-      <a href="#research">Research</a>
-      <a href="cv.pdf">CV</a>
-    </nav>
-  </header>
+<main>
 
-  <main>
+  <div id="intro-wrapper" class="l-text">
 
-    <!-- Intro -->
-    <div id="intro-wrapper" class="l-text">
-
-      <div id="intro-title-wrapper">
-        <div id="intro-image-wrapper">
-          <!-- Replace images/portrait.jpg with your own square photo -->
-          <img id="intro-image" src="images/portrait.jpg" alt="Harsh Nishant Lalai">
+    <div id="intro-title-wrapper">
+      <div id="intro-image-wrapper">
+        <img id="intro-image" src="{{ '/images/portrait.png' | relative_url }}" alt="Harsh Nishant Lalai">
+      </div>
+      <div id="intro-title-text-wrapper">
+        <h1 id="intro-title">Harsh Nishant Lalai</h1>
+        <div id="intro-subtitle">
+          Incoming PhD Student at
+          <a href="https://www.jhu.edu/">Johns Hopkins</a>
         </div>
-        <div id="intro-title-text-wrapper">
-          <h1 id="intro-title">Harsh Nishant Lalai</h1>
-          <div id="intro-subtitle">
-            Incoming PhD Student at
-            <a href="https://www.jhu.edu/">Johns Hopkins</a>
-          </div>
-          <div id="intro-title-socials">
-            <!-- TODO: Replace href="#" with mailto:your@email.com -->
-            <a class="social-link" href="#" aria-label="Email" title="Email">
-              <i class="fas fa-envelope"></i>
-            </a>
-            <!-- TODO: Replace href="#" with your Twitter/X URL -->
-            <a class="social-link" href="#" aria-label="Twitter / X" title="Twitter / X">
-              <i class="fab fa-x-twitter"></i>
-            </a>
-            <a class="social-link" href="https://github.com/Harsh-Lalai" aria-label="GitHub" title="GitHub">
-              <i class="fab fa-github"></i>
-            </a>
-            <!-- TODO: Replace href="#" with your Google Scholar URL -->
-            <a class="social-link" href="#" aria-label="Google Scholar" title="Google Scholar">
-              <i class="fas fa-graduation-cap"></i>
-            </a>
-            <!-- TODO: Replace href="#" with your LinkedIn URL -->
-            <a class="social-link" href="#" aria-label="LinkedIn" title="LinkedIn">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-          </div>
+        <div id="intro-title-socials">
+          <a class="social-link" href="mailto:{{ site.author.email }}" aria-label="Email" title="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a class="social-link" href="https://x.com/Harsh_N_Lalai10" aria-label="X" title="X">
+            <i class="fab fa-x-twitter"></i>
+          </a>
+          <a class="social-link" href="https://github.com/Harsh-Lalai" aria-label="GitHub" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a class="social-link" href="https://scholar.google.com/citations?user=z7K0WH8AAAAJ&hl=en" aria-label="Google Scholar" title="Google Scholar">
+            <i class="fas fa-graduation-cap"></i>
+          </a>
+          <a class="social-link" href="https://www.linkedin.com/in/harshlalai/" aria-label="LinkedIn" title="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
         </div>
       </div>
+    </div>
 
-      <!-- Quick-nav button row -->
-      <div id="everything-else">
-        <a href="cv.pdf">
-          <div><i class="fas fa-file icon-right-space"></i>CV</div>
-        </a>
-        <a href="#research">
-          <div><i class="fas fa-book-open icon-right-space"></i>Research</div>
-        </a>
-        <!-- TODO: Replace href="#" with mailto:your@email.com -->
-        <a href="#">
-          <div><i class="fas fa-envelope icon-right-space"></i>Contact</div>
-        </a>
+    <div id="everything-else">
+      <a href="{{ '/cv/' | relative_url }}">
+        <div><i class="fas fa-address-card icon-right-space"></i>CV</div>
+      </a>
+      <a href="#research">
+        <div><i class="fas fa-book-open icon-right-space"></i>Research</div>
+      </a>
+      <a href="mailto:{{ site.author.email }}">
+        <div><i class="fas fa-envelope icon-right-space"></i>Contact</div>
+      </a>
+    </div>
+
+    <div>
+      Hey there! I'm an incoming PhD student in Computer Science at
+      <span style="white-space:nowrap"><img src="{{ '/images/jhu-shield.png' | relative_url }}" alt="JHU" class="inline-icon" style="height:18px;width:18px;vertical-align:middle;margin:0 1px;position:relative;top:-1.5px;"> Johns Hopkins University</span>,
+      co-advised by
+      <a href="https://kristinagligoric.github.io/">Kristina Gligorić</a>
+      and
+      <a href="https://www.cs.jhu.edu/~vandurme/">Benjamin Van Durme</a>.
+      Previously, I completed my undergraduate degree at
+      <span style="white-space:nowrap"><img src="{{ '/images/bits-logo.svg' | relative_url }}" alt="BITS" class="inline-icon" style="height:18px;width:auto;vertical-align:middle;margin:0 1px;position:relative;top:-1.5px;"> BITS Pilani, Goa Campus</span>.
+    </div>
+
+    <div style="height:1rem"></div>
+
+    <div>
+      I'm interested in <strong>trustworthy AI</strong>, focusing on language models under
+      uncertainty and multi-agent social interactions. My goal is to develop
+      rigorous evaluations and robust methodologies that enable increasingly
+      capable AI systems to be deployed safely and reliably in real-world settings.
+    </div>
+
+    <div style="height:1rem"></div>
+
+    <div>
+      I've collaborated with researchers at
+      <span style="white-space:nowrap"><img src="{{ '/images/stanford-shield.jpg' | relative_url }}" alt="Stanford" class="inline-icon" style="height:20px;width:auto;vertical-align:middle;margin:0 1px;position:relative;top:-2px;"> Stanford</span>,
+      <span style="white-space:nowrap"><img src="{{ '/images/harvard-shield.png' | relative_url }}" alt="Harvard" class="inline-icon" style="height:22px;width:auto;vertical-align:middle;margin:0 1px;position:relative;top:-1px;"> Harvard</span>,
+      <span style="white-space:nowrap"><img src="{{ '/images/gt-shield.png' | relative_url }}" alt="Georgia Tech" class="inline-icon" style="height:18px;width:auto;vertical-align:middle;margin:0 1px;position:relative;top:-2px;"> Georgia Institute of Technology</span>,
+      <span style="white-space:nowrap"><img src="{{ '/images/psu-shield.png' | relative_url }}" alt="Penn State" class="inline-icon" style="height:20px;width:auto;vertical-align:middle;margin:0 1px;position:relative;top:-2px;"> Pennsylvania State</span>,
+      and
+      <span style="white-space:nowrap"><img src="{{ '/images/emory-shield.png' | relative_url }}" alt="Emory" class="inline-icon" style="height:22px;width:auto;vertical-align:middle;margin:0 1px;position:relative;top:-1px;"> Emory</span> University.
+    </div>
+
+  </div>
+
+  <hr class="l-middle home-hr">
+
+  <h2 id="research" class="feature-title l-text">
+    Featured <a href="{{ '/cv/#publications' | relative_url }}">Research Publications</a>
+  </h2>
+
+  <div class="cover-wrapper cover-wrapper-3-col l-page">
+
+    <div class="cover">
+      <div class="cover-image">
+        <a href="{{ '/papers/intentions/' | relative_url }}"><img src="{{ '/images/paper-intentions.jpg' | relative_url }}" alt="From Intentions to Techniques"></a>
       </div>
+      <div class="cover-inner">
+        <div class="cover-top">
+          <div class="cover-title"><a href="{{ '/papers/intentions/' | relative_url }}">From Intentions to Techniques</a></div>
+          <div class="cover-subtitle">
+            A Comprehensive Taxonomy and Challenges in Text Watermarking
+            for Large Language Models
+          </div>
+          <div class="cover-venue-year">Findings of NAACL 2025</div>
+        </div>
+        <div class="pub-misc">
+          <a href="https://aclanthology.org/2025.findings-naacl.343.pdf"><i class="fa-solid fa-file-pdf"></i>PDF</a>
+          <a href="https://github.com/Harsh-Lalai/NAACL-2025-A-Taxonomy-of-Text-Watermarking-for-LLMs"><i class="fa-solid fa-sitemap"></i>Taxonomy</a>
+          <a href="{{ '/papers/intentions/' | relative_url }}"><i class="fa-solid fa-link"></i>Project</a>
+        </div>
+      </div>
+    </div>
 
-      <div>
-        I'm an incoming PhD student in Computer Science at
-        <a href="https://www.jhu.edu/">Johns Hopkins University</a>,
-        co-advised by
+    <div class="cover">
+      <div class="cover-image">
+        <a href="{{ '/papers/worldllms/' | relative_url }}"><img src="{{ '/images/paper-worldllms.jpg' | relative_url }}" alt="The World According to LLMs"></a>
+      </div>
+      <div class="cover-inner">
+        <div class="cover-top">
+          <div class="cover-title"><a href="{{ '/papers/worldllms/' | relative_url }}">The World According to LLMs</a></div>
+          <div class="cover-subtitle">
+            How Geographic Origin Influences LLMs' Entity Deduction
+            Capabilities
+          </div>
+          <div class="cover-venue-year">COLM 2025</div>
+        </div>
+        <div class="pub-misc">
+          <a href="https://arxiv.org/pdf/2508.05525"><i class="fa-solid fa-file-pdf"></i>PDF</a>
+          <a href="https://github.com/Harsh-Lalai/twentyq"><i class="fa-solid fa-code"></i>Code</a>
+          <a href="https://github.com/Harsh-Lalai/Geo20QPlus"><i class="fa-solid fa-database"></i>Dataset</a>
+          <a href="{{ '/papers/worldllms/' | relative_url }}"><i class="fa-solid fa-link"></i>Project</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="cover">
+      <div class="cover-image">
+        <a href="{{ '/papers/visuals/' | relative_url }}"><img src="{{ '/images/paper-visuals.jpg' | relative_url }}" alt="When Visuals Aren't the Problem"></a>
+      </div>
+      <div class="cover-inner">
+        <div class="cover-top">
+          <div class="cover-title"><a href="{{ '/papers/visuals/' | relative_url }}">When Visuals Aren't the Problem</a></div>
+          <div class="cover-subtitle">
+            Evaluating Vision-Language Models on Misleading
+            Data Visualizations
+          </div>
+          <div class="cover-venue-year">arXiv 2026</div>
+        </div>
+        <div class="pub-misc">
+          <a href="https://arxiv.org/abs/2603.22368"><i class="fa-solid fa-file-pdf"></i>PDF</a>
+          <a href="https://github.com/Harsh-Lalai/Evaluating-Vision-Language-Models-on-Misleading-Data-Visualizations"><i class="fa-solid fa-code"></i>Code</a>
+          <a href="https://huggingface.co/datasets/HarvardVCG/MisVisBench"><i class="fa-solid fa-database"></i>Dataset</a>
+          <a href="{{ '/papers/visuals/' | relative_url }}"><i class="fa-solid fa-link"></i>Project</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <hr class="l-middle home-hr">
+
+  <h2 class="feature-title l-text">Updates!</h2>
+
+  <div class="updates-list l-text">
+
+    <div class="update-item">
+      <time class="update-date">April 2026</time>
+      <div class="update-text">
+        Excited to start my PhD at
+        Johns Hopkins University
+        in Fall 2026, co-advised by
         <a href="https://kristinagligoric.github.io/">Kristina Gligoric</a>
         and
-        <a href="https://www.cs.jhu.edu/~vandurme/">Benjamin Van Durme</a>.
-        Previously, I completed my undergraduate degree at
-        <a href="https://www.bits-pilani.ac.in/goa/">BITS Pilani, Goa Campus</a>.
-      </div>
-
-      <div style="height:1rem"></div>
-
-      <div>
-        My research interests span <strong>natural language processing</strong>
-        and <strong>large language models</strong>, including work on text
-        watermarking, geographic biases in language models, and the evaluation
-        of vision-language models on complex reasoning tasks.
-      </div>
-
-    </div>
-
-    <hr class="l-middle home-hr">
-
-    <!-- Research Publications -->
-    <h2 id="research" class="feature-title l-text">
-      Featured <a href="#research">Research Publications</a>
-    </h2>
-    <p class="feature-text l-text">
-      Research on NLP, large language models, and AI evaluation.
-    </p>
-
-    <div class="cover-wrapper cover-wrapper-3-col l-page">
-
-      <!-- Paper 1: Text Watermarking -->
-      <div class="cover">
-        <div class="cover-image">
-          <div class="paper-placeholder paper-bg-1"></div>
-        </div>
-        <div class="cover-inner">
-          <div class="cover-top">
-            <div class="cover-title">From Intentions to Techniques</div>
-            <div class="cover-subtitle">
-              A Comprehensive Taxonomy and Challenges in Text Watermarking
-              for Large Language Models
-            </div>
-          </div>
-          <div class="cover-footer-wrapper">
-            <div>
-              <div class="cover-venue">Findings of NAACL</div>
-              <div class="cover-year">2025</div>
-            </div>
-            <div class="cover-links">
-              <div class="pub-misc">
-                <!-- TODO: add PDF / arXiv link -->
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Paper 2: Geographic LLMs -->
-      <div class="cover">
-        <div class="cover-image">
-          <div class="paper-placeholder paper-bg-2"></div>
-        </div>
-        <div class="cover-inner">
-          <div class="cover-top">
-            <div class="cover-title">The World According to LLMs</div>
-            <div class="cover-subtitle">
-              How Geographic Origin Influences LLMs' Entity Deduction
-              Capabilities
-            </div>
-          </div>
-          <div class="cover-footer-wrapper">
-            <div>
-              <div class="cover-venue">COLM</div>
-              <div class="cover-year">2025</div>
-            </div>
-            <div class="cover-links">
-              <div class="pub-misc">
-                <!-- TODO: add PDF / arXiv link -->
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Paper 3: Vision-Language Models -->
-      <div class="cover">
-        <div class="cover-image">
-          <div class="paper-placeholder paper-bg-3"></div>
-        </div>
-        <div class="cover-inner">
-          <div class="cover-top">
-            <div class="cover-title">When Visuals Aren't the Problem</div>
-            <div class="cover-subtitle">
-              Evaluating Vision-Language Models on Misleading
-              Data Visualizations
-            </div>
-          </div>
-          <div class="cover-footer-wrapper">
-            <div>
-              <div class="cover-venue">arXiv</div>
-              <div class="cover-year">2026</div>
-            </div>
-            <div class="cover-links">
-              <div class="pub-misc">
-                <a href="https://arxiv.org/abs/2603.22368">PDF</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <hr class="l-middle home-hr">
-
-    <!-- Updates -->
-    <h2 class="feature-title l-text">Updates!</h2>
-
-    <div class="updates-list l-text">
-
-      <div class="update-item">
-        <time class="update-date">June 2026</time>
-        <div class="update-text">
-          Excited to start my PhD at
-          <a href="https://www.jhu.edu/">Johns Hopkins University</a>
-          in Fall 2026, co-advised by
-          <a href="https://kristinagligoric.github.io/">Kristina Gligoric</a>
-          and
-          <a href="https://www.cs.jhu.edu/~vandurme/">Benjamin Van Durme</a>!
-        </div>
-      </div>
-
-      <div class="update-item">
-        <time class="update-date">Spring 2026</time>
-        <div class="update-text">
-          <a href="https://arxiv.org/abs/2603.22368">When Visuals Aren't the Problem</a>
-          is now available on arXiv.
-        </div>
-      </div>
-
-      <div class="update-item">
-        <time class="update-date">2025</time>
-        <div class="update-text">
-          The World According to LLMs was accepted to COLM 2025.
-        </div>
-      </div>
-
-      <div class="update-item">
-        <time class="update-date">2025</time>
-        <div class="update-text">
-          From Intentions to Techniques was accepted to Findings of NAACL 2025.
-        </div>
-      </div>
-
-    </div>
-
-  </main>
-
-  <footer>
-    <div id="footer-left">
-      <div>&copy; 2026 Harsh Nishant Lalai</div>
-      <div style="font-size:0.875rem;margin-top:0.5rem;">
-        Design from <a class="footer-link" href="https://fredhohman.com/">Fred Hohman</a>
+        <a href="https://www.cs.jhu.edu/~vandurme/">Benjamin Van Durme</a>!
       </div>
     </div>
-    <div id="footer-right">
-      <a class="footer-icon" href="#"                               aria-label="Email"><i class="fas fa-envelope"></i></a>
-      <a class="footer-icon" href="#"                               aria-label="Twitter / X"><i class="fab fa-x-twitter"></i></a>
-      <a class="footer-icon" href="https://github.com/Harsh-Lalai" aria-label="GitHub"><i class="fab fa-github"></i></a>
-      <a class="footer-icon" href="#"                               aria-label="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
-      <a class="footer-icon" href="#"                               aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-    </div>
-  </footer>
 
-</body>
-</html>
+    <div class="update-item">
+      <time class="update-date">March 2026</time>
+      <div class="update-text">
+        <a href="https://arxiv.org/abs/2603.22368">When Visuals Aren't the Problem</a>
+        is now available on arXiv.
+      </div>
+    </div>
+
+    <div class="update-item">
+      <time class="update-date">July 2025</time>
+      <div class="update-text">
+        <a href="https://openreview.net/forum?id=hJtvCfDfs1#discussion">The World According to LLMs</a> was accepted to COLM 2025.
+      </div>
+    </div>
+
+    <div class="update-item">
+      <time class="update-date">July 2025</time>
+      <div class="update-text">
+        Started my undergraduate thesis at
+        Georgia Institute of Technology
+        under the advisement of
+        <a href="https://www.cc.gatech.edu/people/sashank-varma">Sashank Varma</a>
+        and
+        <a href="https://raj-sanjay-shah.github.io/">Raj Sanjay Shah</a>.
+      </div>
+    </div>
+
+    <div class="update-item">
+      <time class="update-date">Jan 2025</time>
+      <div class="update-text">
+        <a href="https://aclanthology.org/2025.findings-naacl.343/">From Intentions to Techniques</a> was accepted to Findings of NAACL 2025.
+      </div>
+    </div>
+
+  </div>
+
+</main>

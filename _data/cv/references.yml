@@ -1,0 +1,24 @@
+
+- name: Dr. Kristina Gligorić
+  role: Assistant Professor
+  group: Department of Computer Science
+  institution: Johns Hopkins University
+  url: "https://kristinagligoric.github.io/"
+
+- name: Dr. Benjamin Van Durme
+  role: Professor
+  group: Department of Computer Science
+  institution: Johns Hopkins University
+  url: "https://www.cs.jhu.edu/~vandurme/"
+
+- name: Dr. Sashank Varma
+  role: Professor
+  group: School of Interactive Computing
+  institution: Georgia Institute of Technology
+  url: "https://www.cc.gatech.edu/people/sashank-varma"
+
+- name: Dr. Yi-Chia Wang
+  role: Principal Research Scientist
+  institution: Carnegie Mellon University
+  extra: "Visiting Scholar, <i>Stanford University</i>"
+  url: "https://www.cs.cmu.edu/~yichiaw/"

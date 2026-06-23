@@ -1,0 +1,196 @@
+---
+layout: cv
+title: CV
+description: "Harsh Nishant Lalai - Curriculum Vitae"
+permalink: /cv/
+---
+
+<h1 id="cv-title"><a href="{{ '/' | relative_url }}">Harsh Nishant Lalai</a></h1>
+<p id="cv-subtitle"><i>Incoming PhD Student, Johns Hopkins University</i></p>
+
+<div class="cv-about">
+  I'm interested in trustworthy AI, focusing on language models under uncertainty and multi-agent
+  social interactions. My goal is to develop rigorous evaluations and robust methodologies
+  that enable increasingly capable AI systems to be deployed safely and reliably in
+  real-world settings.
+</div>
+
+<div class="cv-about" style="margin-top:0.75rem">
+  I've collaborated with researchers at
+  <span style="white-space:nowrap"><img src="{{ '/images/stanford-shield.jpg' | relative_url }}" alt="Stanford" class="inline-icon" style="height:18px;width:auto;vertical-align:middle;margin:0 1px;position:relative;top:-2px;"> Stanford</span>,
+  <span style="white-space:nowrap"><img src="{{ '/images/harvard-shield.png' | relative_url }}" alt="Harvard" class="inline-icon" style="height:20px;width:auto;vertical-align:middle;margin:0 1px;position:relative;top:-1px;"> Harvard</span>,
+  <span style="white-space:nowrap"><img src="{{ '/images/gt-shield.png' | relative_url }}" alt="Georgia Tech" class="inline-icon" style="height:16px;width:auto;vertical-align:middle;margin:0 1px;position:relative;top:-2px;"> Georgia Institute of Technology</span>,
+  <span style="white-space:nowrap"><img src="{{ '/images/psu-shield.png' | relative_url }}" alt="Penn State" class="inline-icon" style="height:18px;width:auto;vertical-align:middle;margin:0 1px;position:relative;top:-2px;"> Pennsylvania State</span>,
+  and
+  <span style="white-space:nowrap"><img src="{{ '/images/emory-shield.png' | relative_url }}" alt="Emory" class="inline-icon" style="height:20px;width:auto;vertical-align:middle;margin:0 1px;position:relative;top:-1px;"> Emory</span> University.
+</div>
+
+<div class="cv-spacer-large"></div>
+
+<div class="cv-image-links-wrapper">
+  <div class="cv-image-links">
+    <div class="cv-social-link">
+      <div class="cv-social-link-icon-wrapper"><a href="mailto:{{ site.author.email }}"><i class="fas fa-fw fa-envelope"></i></a></div>
+      <div class="cv-social-link-text-wrapper"><a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></div>
+    </div>
+    <div class="cv-social-link">
+      <div class="cv-social-link-icon-wrapper"><a href="{{ '/' | absolute_url }}"><i class="fas fa-fw fa-home"></i></a></div>
+      <div class="cv-social-link-text-wrapper"><a href="{{ '/' | absolute_url }}">harsh-lalai.github.io</a></div>
+    </div>
+    <div class="cv-social-link">
+      <div class="cv-social-link-icon-wrapper"><a href="https://scholar.google.com/citations?user=z7K0WH8AAAAJ&hl=en"><i class="fas fa-fw fa-graduation-cap"></i></a></div>
+      <div class="cv-social-link-text-wrapper"><a href="https://scholar.google.com/citations?user=z7K0WH8AAAAJ&hl=en">Google Scholar</a></div>
+    </div>
+    <div class="cv-social-link cv-pdf-row">
+      <div class="cv-social-link-icon-wrapper cv-pdf-link"><a href="{{ '/cv.pdf' | relative_url }}"><i class="far fa-fw fa-file-pdf"></i></a></div>
+      <div class="cv-social-link-text-wrapper"><a href="{{ '/cv.pdf' | relative_url }}">CV PDF</a></div>
+    </div>
+  </div>
+  <div class="cv-image-links">
+    <div class="cv-social-link">
+      <div class="cv-social-link-icon-wrapper"><a href="https://github.com/Harsh-Lalai"><i class="fab fa-fw fa-github"></i></a></div>
+      <div class="cv-social-link-text-wrapper"><a href="https://github.com/Harsh-Lalai">@Harsh-Lalai</a></div>
+    </div>
+    <div class="cv-social-link">
+      <div class="cv-social-link-icon-wrapper"><a href="https://x.com/Harsh_N_Lalai10"><i class="fab fa-fw fa-x-twitter"></i></a></div>
+      <div class="cv-social-link-text-wrapper"><a href="https://x.com/Harsh_N_Lalai10">@Harsh_N_Lalai10</a></div>
+    </div>
+    <div class="cv-social-link">
+      <div class="cv-social-link-icon-wrapper"><a href="https://www.linkedin.com/in/harshlalai/"><i class="fab fa-fw fa-linkedin-in"></i></a></div>
+      <div class="cv-social-link-text-wrapper"><a href="https://www.linkedin.com/in/harshlalai/">@harshlalai</a></div>
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<h2>Education</h2>
+{% for entry in site.data.cv.education %}
+  <div class="cv-left-date">{{ entry.dates }}</div>
+  <div><b>{{ entry.degree }}</b>{% if entry.degree2 %}, <b>{{ entry.degree2 }}</b>{% endif %}</div>
+  <div><i>{% if entry.institution_url %}<a href="{{ entry.institution_url }}">{{ entry.institution }}</a>{% else %}{{ entry.institution }}{% endif %}{% if entry.location %}, {{ entry.location }}{% endif %}</i></div>
+  {% if entry.detail %}<div class="cv-description">{{ entry.detail }}</div>{% endif %}
+  {% if entry.notes %}{% for note in entry.notes %}<div class="cv-description">{{ note }}</div>{% endfor %}{% endif %}
+  <div class="cv-spacer"></div>
+{% endfor %}
+
+<h2>Research Experience</h2>
+{% for entry in site.data.cv.research %}
+  <div class="cv-left-date">{{ entry.dates }}</div>
+  <div><b>{% if entry.place_url %}<a href="{{ entry.place_url }}">{{ entry.place }}</a>{% else %}{{ entry.place }}{% endif %}</b>{% if entry.location %}, {{ entry.location }}{% endif %}</div>
+  <div><i>{{ entry.role }}{% if entry.group %}, {% if entry.group_url %}<a href="{{ entry.group_url }}">{{ entry.group }}</a>{% else %}{{ entry.group }}{% endif %}{% endif %}</i></div>
+  {% if entry.mentors %}
+    <div class="cv-mentor-line"><span class="cv-label">Mentor{% if entry.mentors.size > 1 %}s{% endif %}:</span> {% for m in entry.mentors %}{% if m.url %}<a href="{{ m.url }}">{{ m.name }}</a>{% else %}{{ m.name }}{% endif %}{% unless forloop.last %}, {% endunless %}{% endfor %}</div>
+  {% endif %}
+  {% if entry.title %}<div class="cv-paper-line"><span class="cv-label">Paper:</span> {% if entry.paper_url %}<a href="{{ entry.paper_url | relative_url }}">{{ entry.title }}</a>{% else %}{{ entry.title }}{% endif %}</div>{% endif %}
+  {% if entry.description %}<div class="cv-description">{{ entry.description }}</div>{% endif %}
+  <div class="cv-spacer"></div>
+{% endfor %}
+
+<h2>Employment</h2>
+{% for entry in site.data.cv.employment %}
+  <div class="cv-left-date">{{ entry.dates }}</div>
+  <div><b>{% if entry.place_url %}<a href="{{ entry.place_url }}">{{ entry.place }}</a>{% else %}{{ entry.place }}{% endif %}</b>{% if entry.location %}, {{ entry.location }}{% endif %}</div>
+  <div><i>{{ entry.role }}{% if entry.group %}, {{ entry.group }}{% endif %}</i></div>
+  {% if entry.description %}<div class="cv-description">{{ entry.description }}</div>{% endif %}
+  <div class="cv-spacer"></div>
+{% endfor %}
+
+<h2>Honors and Awards</h2>
+{% for entry in site.data.cv.awards %}
+  <div class="cv-left-date">{{ entry.year }}</div>
+  <div class="cv-award-title">{% if entry.url %}<a href="{{ entry.url }}">{{ entry.title }}</a>{% else %}{{ entry.title }}{% endif %}</div>
+  {% if entry.detail %}<div class="cv-description">{{ entry.detail }}</div>{% endif %}
+  <div class="cv-spacer"></div>
+{% endfor %}
+
+<h2 id="publications">Publications</h2>
+
+<h3 class="cv-subhead">Conferences</h3>
+{% for entry in site.data.cv.publications %}
+  <div class="cv-left-date">{{ entry.year }}</div>
+  <div><b>{% if entry.url %}<a href="{{ entry.url | relative_url }}">{{ entry.title }}</a>{% else %}{{ entry.title }}{% endif %}</b></div>
+  <div class="cv-authors">{{ entry.authors_html }}</div>
+  <div class="cv-venue"><i>{{ entry.venue }}</i></div>
+  {% if entry.links or entry.equal_contribution %}
+    <div class="cv-pub-links">
+      {% for link in entry.links %}{% include cv-pub-link.html link=link %}{% endfor %}
+      {% if entry.equal_contribution %}<span class="equal-contribution">*Authors contributed equally</span>{% endif %}
+    </div>
+  {% endif %}
+  <div class="cv-spacer"></div>
+{% endfor %}
+
+<h3 class="cv-subhead">Preprints</h3>
+{% for entry in site.data.cv.preprints %}
+  <div class="cv-left-date">{{ entry.year }}</div>
+  <div><b>{% if entry.url %}<a href="{{ entry.url | relative_url }}">{{ entry.title }}</a>{% else %}{{ entry.title }}{% endif %}</b></div>
+  <div class="cv-authors">{{ entry.authors_html }}</div>
+  <div class="cv-venue"><i>{{ entry.venue }}</i>{% if entry.status %} . {{ entry.status }}{% endif %}</div>
+  {% if entry.links or entry.equal_contribution %}
+    <div class="cv-pub-links">
+      {% for link in entry.links %}{% include cv-pub-link.html link=link %}{% endfor %}
+      {% if entry.equal_contribution %}<span class="equal-contribution">*Authors contributed equally</span>{% endif %}
+    </div>
+  {% endif %}
+  <div class="cv-spacer"></div>
+{% endfor %}
+
+<h2>Teaching</h2>
+{% for entry in site.data.cv.teaching %}
+  <div class="cv-left-date">{{ entry.dates }}</div>
+  <div><b>{{ entry.role }}</b></div>
+  <div><i>{{ entry.institution }}{% if entry.location %}, {{ entry.location }}{% endif %}</i></div>
+  <div class="cv-course-line">{{ entry.course_title }}{% if entry.course_code %} ({{ entry.course_code }}){% endif %}{% if entry.instructor %}, <span class="cv-label">Instructor:</span> {{ entry.instructor }}{% endif %}</div>
+  {% if entry.detail %}<div class="cv-description">{{ entry.detail }}</div>{% endif %}
+  <div class="cv-spacer"></div>
+{% endfor %}
+
+<h2>Service</h2>
+
+<div class="cv-service-title"><b>Reviewing</b></div>
+{% for venue in site.data.cv.service.reviewing %}
+  <div class="cv-service-venue">{{ venue.name }}{% if venue.acronym %} (<b>{{ venue.acronym }}</b>){% endif %}{% if venue.years %} {{ venue.years | join: ", " }}{% endif %}</div>
+{% endfor %}
+
+<div class="cv-service-title"><b>Volunteering</b></div>
+{% for venue in site.data.cv.service.volunteering %}
+  <div class="cv-service-venue">{{ venue.name }}{% if venue.acronym %} (<b>{{ venue.acronym }}</b>){% endif %}{% if venue.years %} {{ venue.years | join: ", " }}{% endif %}</div>
+{% endfor %}
+
+<h2>Technical Skills</h2>
+{% for entry in site.data.cv.skills %}
+  <div class="cv-left-date">{{ entry.level }}</div>
+  <div class="cv-inline-list">{{ entry.items | join: ", " }}</div>
+  <div class="cv-spacer-small"></div>
+{% endfor %}
+
+<h2>Languages</h2>
+{% for entry in site.data.cv.languages %}
+  <div class="cv-left-date">{{ entry.level }}</div>
+  <div class="cv-inline-list">{{ entry.items | join: ", " }}</div>
+  <div class="cv-spacer-small"></div>
+{% endfor %}
+
+<h2>Hobbies</h2>
+{% for entry in site.data.cv.hobbies %}
+  <div class="cv-left-date">{{ entry.category }}</div>
+  <div class="cv-hobby-row">{{ entry.items | join: ", " }}</div>
+  <div class="cv-spacer-small"></div>
+{% endfor %}
+
+<h2>References</h2>
+{% for entry in site.data.cv.references %}
+  {% assign display_url = entry.url | remove_first: "https://" | remove_first: "http://" | replace_first: "www.", "" %}
+  {% assign last_char = display_url | slice: -1, 1 %}
+  {% if last_char == "/" %}
+    {% assign trimmed_len = display_url.size | minus: 1 %}
+    {% assign display_url = display_url | slice: 0, trimmed_len %}
+  {% endif %}
+  <div class="cv-ref-name"><a href="{{ entry.url }}"><b>{{ entry.name }}</b></a>, {{ entry.role }}</div>
+  {% if entry.group %}<div class="cv-ref-group">{{ entry.group }}</div>{% endif %}
+  <div class="cv-ref-institution"><i>{{ entry.institution }}</i></div>
+  {% if entry.extra %}<div class="cv-ref-extra">{{ entry.extra }}</div>{% endif %}
+  <div class="cv-ref-link"><a href="{{ entry.url }}">{{ display_url }}</a></div>
+  <div class="cv-spacer"></div>
+{% endfor %}

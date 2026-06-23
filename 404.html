@@ -1,37 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>404 &mdash; Page Not Found &middot; Harsh Nishant Lalai</title>
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-        crossorigin="anonymous" referrerpolicy="no-referrer">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <header id="masthead">
-    <h1><a href="/">Harsh Lalai</a></h1>
-    <nav>
-      <a href="/#research">Research</a>
-      <a href="/cv.pdf">CV</a>
-    </nav>
-  </header>
-  <main>
-    <div class="l-text" style="margin-top:4rem;margin-bottom:4rem;">
-      <h1 style="font-size:4rem;font-weight:700;color:var(--near-black);margin-bottom:0;">404</h1>
-      <p style="font-size:1.3rem;color:var(--gray);margin-top:0.5rem;">Page not found.</p>
-      <p><a href="/">Go back home</a></p>
-    </div>
-  </main>
-  <footer>
-    <div id="footer-left">
-      <div>&copy; 2026 Harsh Nishant Lalai</div>
-    </div>
-    <div id="footer-right">
-      <a class="footer-icon" href="#"                               aria-label="Email"><i class="fas fa-envelope"></i></a>
-      <a class="footer-icon" href="https://github.com/Harsh-Lalai" aria-label="GitHub"><i class="fab fa-github"></i></a>
-    </div>
-  </footer>
-</body>
-</html>
+---
+layout: default
+title: 404 — Page Not Found
+permalink: /404.html
+masthead: true
+---
+
+<main>
+  <div class="l-text" style="margin-top:4rem;margin-bottom:4rem;">
+    <h1 style="font-size:4rem;font-weight:700;color:var(--near-black);margin-bottom:0;">404</h1>
+    <p style="font-size:1.3rem;color:var(--gray);margin-top:0.5rem;">Page not found.</p>
+    <p><a href="{{ '/' | relative_url }}">Go back home</a></p>
+  </div>
+</main>

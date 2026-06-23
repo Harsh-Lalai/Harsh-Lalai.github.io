@@ -1,0 +1,16 @@
+- institution: Johns Hopkins University
+  institution_url: "https://www.jhu.edu/"
+  location: Baltimore, MD
+  dates: Aug 2026 - Present
+  degree: PhD in Computer Science
+  detail: "Advisor: <span class=\"cv-advisor\"><a href=\"https://kristinagligoric.github.io/\">Kristina Gligorić</a></span>, Co-advisor: <span class=\"cv-advisor\"><a href=\"https://www.cs.jhu.edu/~vandurme/\">Benjamin Van Durme</a></span>"
+
+- institution: Birla Institute of Technology and Science, Pilani, Goa Campus
+  institution_url: "https://www.bits-pilani.ac.in/goa/"
+  location: India
+  dates: Oct 2021 - Jul 2026
+  degree: Bachelor of Engineering in Computer Science
+  degree2: Master of Science in Economics
+  detail: "GPA: <span class=\"cv-advisor\">9.40 / 10</span>"
+  notes:
+    - "Undergraduate Thesis at <span class=\"cv-advisor\"><a href=\"https://www.gatech.edu/\">Georgia Institute of Technology</a></span>: <span class=\"cv-advisor\">LLMs' Intermediate Thinking Tokens Are Weak Predictors of Human Cognitive Effort in Scientific Misconception Judgments</span>"

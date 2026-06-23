@@ -1,0 +1,16 @@
+---
+layout: null
+---
+<!DOCTYPE html>
+<html lang="en">
+{%- include head.html -%}
+<body>
+  <a class="cv-download-btn" href="{{ '/cv.pdf' | relative_url }}" download="Harsh_Nishant_Lalai_CV.pdf">
+    <i class="far fa-fw fa-file-pdf"></i> Download CV
+  </a>
+  <main id="cv">
+    {{ content }}
+  </main>
+  {%- include footer.html -%}
+</body>
+</html>

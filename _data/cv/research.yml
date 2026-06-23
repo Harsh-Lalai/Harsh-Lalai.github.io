@@ -1,0 +1,52 @@
+- dates: July 2025 - May 2026
+  place: Georgia Institute of Technology
+  place_url: "https://www.gatech.edu/"
+  location: Atlanta, GA
+  role: Undergraduate Thesis Researcher
+  mentors:
+    - { name: Sashank Varma, url: "https://www.cc.gatech.edu/people/sashank-varma" }
+    - { name: Raj Sanjay Shah, url: "https://raj-sanjay-shah.github.io/" }
+  title: "LLMs' Intermediate Thinking Tokens Are Weak Predictors of Human Cognitive Effort in Scientific Misconception Judgments"
+  description: Investigating whether LLM reasoning-effort signals (thinking tokens) correspond to human cognitive effort on scientific misconceptions.
+  status: Submitted to ACL Rolling Review (May 2026).
+
+- dates: June 2025 - March 2026
+  place: Harvard University
+  place_url: "https://www.harvard.edu/"
+  location: Cambridge, MA
+  role: Research Collaborator
+  group: Visual Computing Group
+  group_url: "https://vcg.seas.harvard.edu/"
+  mentors:
+    - { name: Hanspeter Pfister, url: "https://seas.harvard.edu/person/hanspeter-pfister" }
+    - { name: Grace Guo, url: "https://gracegsy.github.io/" }
+  title: "When Visuals Aren't the Problem: Evaluating Vision-Language Models on Misleading Data Visualizations"
+  paper_url: "/papers/visuals/"
+  description: Studying VLM robustness to misleading chart and caption pairs and the ability to detect fine-grained reasoning and visualization errors.
+  status: Submitted to ACL Rolling Review (March 2026).
+
+- dates: May 2024 - March 2025
+  place: "<a href=\"https://www.emory.edu/\">Emory University</a> / <a href=\"https://brocku.ca/\">Brock University</a>"
+  location: Atlanta, GA
+  role: Visiting Scholar
+  mentors:
+    - { name: Ali Emami, url: "https://ali-emami.com/" }
+    - { name: Yi-Chia Wang, url: "https://www.cs.cmu.edu/~yichiaw/" }
+  title: "The World According to LLMs: How Geographic Origin Influences LLMs' Entity Deduction Capabilities"
+  paper_url: "/papers/worldllms/"
+  description: Evaluating implicit geographic bias in LLMs through a multi-turn entity deduction game. Used notable people and culturally significant objects from diverse regions as entities, and investigated the effect of pre-training frequency and popularity on deduction.
+  status: Presented at COLM 2025.
+
+- dates: Dec 2023 - May 2024
+  place: Pennsylvania State University
+  place_url: "https://www.psu.edu/"
+  location: University Park, PA
+  role: Research Intern
+  group: PIKE Group
+  group_url: "https://pike.psu.edu/"
+  mentors:
+    - { name: Dongwon Lee, url: "https://pike.psu.edu/dongwon/" }
+  title: "From Intentions to Techniques: A Comprehensive Taxonomy and Challenges in Text Watermarking for Large Language Models"
+  paper_url: "/papers/intentions/"
+  description: Analyzed text-watermarking research by intentions, evaluation datasets, and addition / removal methods to construct a unified taxonomy, and highlighted gaps and open challenges in protecting text authorship.
+  status: Presented at NAACL 2025 Findings.

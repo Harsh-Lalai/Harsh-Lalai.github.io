@@ -1,0 +1,14 @@
+{%- assign label = include.link.label -%}
+{%- case label -%}
+  {%- when 'PDF' -%}{% assign icon = 'far fa-file-pdf' %}
+  {%- when 'Paper' -%}{% assign icon = 'far fa-file-pdf' %}
+  {%- when 'Code' -%}{% assign icon = 'fas fa-code' %}
+  {%- when 'Project' -%}{% assign icon = 'fas fa-link' %}
+  {%- when 'Dataset' -%}{% assign icon = 'fas fa-database' %}
+  {%- when 'Taxonomy' -%}{% assign icon = 'fas fa-sitemap' %}
+  {%- when 'Slides' -%}{% assign icon = 'far fa-file-powerpoint' %}
+  {%- when 'Video' -%}{% assign icon = 'fas fa-video' %}
+  {%- when 'arXiv' -%}{% assign icon = 'fas fa-scroll' %}
+  {%- else -%}{% assign icon = 'fas fa-link' %}
+{%- endcase -%}
+<a href="{{ include.link.url | relative_url }}"><i class="{{ icon }} fa-fw"></i> {{ label }}</a>

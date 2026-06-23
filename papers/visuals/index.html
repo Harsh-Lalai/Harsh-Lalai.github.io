@@ -1,0 +1,67 @@
+---
+layout: paper
+title: "When Visuals Aren't the Problem"
+description: "When Visuals Aren't the Problem: Evaluating Vision-Language Models on Misleading Data Visualizations"
+permalink: /papers/visuals/
+---
+
+<div class="paper-header l-screen">
+  <div class="paper-header-content">
+    <h1>When Visuals Aren't the Problem: Evaluating Vision-Language Models on Misleading Data Visualizations</h1>
+    <div class="paper-authors">
+      <div class="author">
+        <img src="{{ '/images/people/harsh.webp' | relative_url }}" class="author-image" alt="Harsh Nishant Lalai">
+        <a href="{{ '/' | relative_url }}">Harsh Nishant Lalai</a><sup>*</sup>
+      </div>
+      <div class="author">
+        <img src="{{ '/images/people/raj.jpeg' | relative_url }}" class="author-image" alt="Raj Sanjay Shah">
+        <a href="https://raj-sanjay-shah.github.io/">Raj Sanjay Shah</a><sup>*</sup>
+      </div>
+      <div class="author">
+        <img src="{{ '/images/people/hanspeter.jpg' | relative_url }}" class="author-image" alt="Hanspeter Pfister" style="object-fit: contain;">
+        <a href="https://seas.harvard.edu/person/hanspeter-pfister">Hanspeter Pfister</a>
+      </div>
+      <div class="author">
+        <img src="{{ '/images/people/sashank.webp' | relative_url }}" class="author-image" alt="Sashank Varma" style="object-position: center top;">
+        <a href="https://www.cc.gatech.edu/people/sashank-varma">Sashank Varma</a>
+      </div>
+      <div class="author">
+        <img src="{{ '/images/people/grace.jpeg' | relative_url }}" class="author-image" alt="Grace Guo">
+        Grace Guo
+      </div>
+    </div>
+    <div class="paper-equal">*Authors contributed equally</div>
+    <div class="paper-venue">arXiv preprint, 2026</div>
+  </div>
+</div>
+
+<div class="paper-body">
+
+  <h2>Abstract</h2>
+  <div>
+    Visualizations help communicate data insights, but deceptive data representations can distort their interpretation and propagate misinformation. While recent Vision Language Models (VLMs) perform well on many chart understanding tasks, their ability to detect misleading visualizations, especially when deception arises from subtle reasoning errors in captions, remains poorly understood. Here, we evaluate VLMs on misleading visualization-caption pairs grounded in a fine-grained taxonomy of reasoning errors (e.g., Cherry-picking, Causal inference) and visualization design errors (e.g., Truncated axis, Dual axis, inappropriate encodings). To this end, we develop a benchmark that combines real-world visualization with human-authored, curated misleading captions designed to elicit specific reasoning and visualization error types, enabling controlled analysis across error categories and modalities of misleadingness. Evaluating many commercial and open-source VLMs, we find that models detect visual design errors substantially more reliably than reasoning-based misinformation, and frequently misclassify non-misleading visualizations as deceptive. Overall, our work fills a gap between coarse detection of misleading content and the attribution of the specific reasoning or visualization errors that give rise to it.
+  </div>
+
+  <h2>Materials</h2>
+  <div class="paper-materials">
+    <a href="https://arxiv.org/abs/2603.22368"><i class="far fa-file-pdf"></i>PDF</a>
+    <a href="https://github.com/Harsh-Lalai/Evaluating-Vision-Language-Models-on-Misleading-Data-Visualizations"><i class="fas fa-code"></i>Code</a>
+    <a href="https://huggingface.co/datasets/HarvardVCG/MisVisBench"><i class="fas fa-database"></i>Dataset</a>
+  </div>
+
+  <h2>BibTeX</h2>
+  <div class="bibtex-wrapper"><button class="bibtex-copy" type="button" onclick="copyBibtex(this)" aria-label="Copy BibTeX" title="Copy BibTeX"><i class="far fa-copy"></i></button><div class="bibtex-scroll"><pre>@misc{lalai2026visuals,
+    title         = "When Visuals Aren't the Problem: Evaluating Vision-Language Models on Misleading Data Visualizations",
+    author        = "Lalai, Harsh Nishant  and
+                     Shah, Raj Sanjay  and
+                     Pfister, Hanspeter  and
+                     Varma, Sashank  and
+                     Guo, Grace",
+    year          = "2026",
+    eprint        = "2603.22368",
+    archivePrefix = "arXiv",
+    primaryClass  = "cs.CV",
+    url           = "https://arxiv.org/abs/2603.22368",
+}</pre></div></div>
+
+</div>

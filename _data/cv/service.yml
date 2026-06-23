@@ -1,0 +1,19 @@
+reviewing:
+  - name: ACL Rolling Review
+    acronym: ARR
+    years: ["2026", "2025"]
+  - name: Conference on Language Modeling
+    acronym: COLM
+    years: ["2026"]
+  - name: International Conference on Mathematics and Computing
+    acronym: ICMC
+    years: ["2023"]
+
+volunteering:
+  - name: International Conference on Mathematics and Computing
+    acronym: ICMC
+    years: ["2023"]
+  - name: International Conference on Data-Driven Computing and Intelligent Systems
+    years: ["2023"]
+  - name: International Conference on Advances in Data-Driven Computing and Intelligent Systems
+    years: ["2022"]

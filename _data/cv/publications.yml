@@ -1,0 +1,21 @@
+- year: 2025
+  authors_html: "<a href=\"https://harshlalai.github.io/\"><strong>Harsh Nishant Lalai</strong></a>*, <a href=\"https://raj-sanjay-shah.github.io/\">Raj Sanjay Shah</a>*, <a href=\"https://jiaxin-pei.github.io/\">Jiaxin Pei</a>, <a href=\"https://www.cc.gatech.edu/people/sashank-varma\">Sashank Varma</a>, <a href=\"https://www.cs.cmu.edu/~yichiaw/\">Yi-Chia Wang</a>, <a href=\"https://ali-emami.com/\">Ali Emami</a>"
+  equal_contribution: true
+  title: "The World According to LLMs: How Geographic Origin Influences LLMs' Entity Deduction Capabilities"
+  url: "/papers/worldllms/"
+  venue: "Second Conference on Language Modeling (COLM) 2025"
+  links:
+    - { label: PDF, url: "https://arxiv.org/pdf/2508.05525" }
+    - { label: Code, url: "https://github.com/Harsh-Lalai/twentyq" }
+    - { label: Dataset, url: "https://github.com/Harsh-Lalai/Geo20QPlus" }
+    - { label: Project, url: "/papers/worldllms/" }
+
+- year: 2025
+  authors_html: "<a href=\"https://harshlalai.github.io/\"><strong>Harsh Nishant Lalai</strong></a>, <a href=\"https://aashish2000.github.io/\">Aashish Anantha Ramakrishnan</a>, <a href=\"https://raj-sanjay-shah.github.io/\">Raj Sanjay Shah</a>, <a href=\"https://pike.psu.edu/dongwon/\">Dongwon Lee</a>"
+  title: "From Intentions to Techniques: A Comprehensive Taxonomy and Challenges in Text Watermarking for Large Language Models"
+  url: "/papers/intentions/"
+  venue: "Findings of the Association for Computational Linguistics: NAACL 2025"
+  links:
+    - { label: PDF, url: "https://aclanthology.org/2025.findings-naacl.343.pdf" }
+    - { label: Taxonomy, url: "https://github.com/Harsh-Lalai/NAACL-2025-A-Taxonomy-of-Text-Watermarking-for-LLMs" }
+    - { label: Project, url: "/papers/intentions/" }
