@@ -3,8 +3,8 @@
   place_url: "https://www.singlestore.com/"
   location: Hyderabad, India
   role: Software Engineering Intern
-  group: AI Team
-  description: Building an experimental semantic retrieval benchmark for SingleStoreDB, comparing transformer-based encoders (e.g., MiniLM, E5, Cohere Embeddings) and vector-index configurations.
+  # description: Building an experimental semantic retrieval benchmark for SingleStoreDB, comparing transformer-based encoders (e.g., MiniLM, E5, Cohere Embeddings) and vector-index configurations.
+  description: Software Engineering Intern under the mentorship of Tigran Avanesov and Harsh Agarwal
 
 - dates: May 2023 - Jul 2023
   place: Jio Brain (formerly Jio Platforms)
